@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product - Demo Git</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><h1>Chuc nang PRODUCT</h1></header>
+  <nav><a href="index.html">Trang chu</a></nav>
+
+  <main>
+    <!-- NHANH: product (Nam) | Moi lan commit chi bo comment 1 khoi: COMMIT 1, roi 2, roi 3 -->
+
+    <!-- >>> COMMIT 1 (Danh sach san pham) - XOA DONG NAY
+    <div class="card">
+      <h2>Danh sach san pham</h2>
+      <table>
+        <thead><tr><th>Ten</th><th>Gia (VND)</th></tr></thead>
+        <tbody id="p-list"></tbody>
+      </table>
+    </div>
+    <script>
+      const products = [
+        { name: 'Ban phim', price: 250000 },
+        { name: 'Chuot', price: 150000 },
+        { name: 'Man hinh', price: 2500000 }
+      ];
+      function renderProducts() {
+        const tbody = document.getElementById('p-list');
+        tbody.innerHTML = '';
+        products.forEach(function (p) {
+          tbody.innerHTML += '<tr><td>' + p.name + '</td><td>' + p.price.toLocaleString('vi-VN') + '</td></tr>';
+        });
+      }
+      renderProducts();
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 2 (Form them san pham) - XOA DONG NAY
+    <div class="card">
+      <h2>Them san pham</h2>
+      <input id="p-name" placeholder="Ten san pham">
+      <input id="p-price" type="number" placeholder="Gia">
+      <button id="p-add">Them</button>
+    </div>
+    <script>
+      document.getElementById('p-add').addEventListener('click', function () {
+        const name = document.getElementById('p-name').value.trim();
+        const price = Number(document.getElementById('p-price').value);
+        if (!name || !price) { alert('Nhap ten va gia hop le!'); return; }
+        products.push({ name: name, price: price });
+        renderProducts();
+      });
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 3 (Tinh tong gia tri) - XOA DONG NAY
+    <div class="card">
+      <button id="p-total">Tinh tong gia tri</button>
+      <p id="p-total-msg"></p>
+    </div>
+    <script>
+      document.getElementById('p-total').addEventListener('click', function () {
+        const total = products.reduce(function (s, p) { return s + p.price; }, 0);
+        document.getElementById('p-total-msg').textContent = 'Tong: ' + total.toLocaleString('vi-VN') + ' VND';
+      });
+    </script>
+    XOA DONG NAY <<< -->
+  </main>
+</body>
+</html>

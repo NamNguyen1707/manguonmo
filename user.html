@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User - Demo Git</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><h1>Chuc nang USER</h1></header>
+  <nav><a href="index.html">Trang chu</a></nav>
+
+  <main>
+    <!-- NHANH: user (Bao) | Moi lan commit chi bo comment 1 khoi: COMMIT 1, roi 2, roi 3 -->
+
+    <!-- >>> COMMIT 1 (Form dang ky + chuc nang dang ky) - XOA DONG NAY
+    <div class="card">
+      <h2>Dang ky tai khoan</h2>
+      <input id="u-name" placeholder="Ten nguoi dung">
+      <input id="u-email" placeholder="Email">
+      <button id="btn-register">Dang ky</button>
+      <p id="u-msg"></p>
+    </div>
+    <script>
+      const users = [];
+      document.getElementById('btn-register').addEventListener('click', function () {
+        const name = document.getElementById('u-name').value.trim();
+        const email = document.getElementById('u-email').value.trim();
+        const msg = document.getElementById('u-msg');
+        if (!name || !email) { msg.textContent = 'Vui long nhap day du!'; return; }
+        users.push({ name: name, email: email });
+        msg.textContent = 'Dang ky thanh cong: ' + name;
+      });
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 2 (Danh sach user) - XOA DONG NAY
+    <div class="card">
+      <h2>Danh sach user (<span id="u-count">0</span>)</h2>
+      <table>
+        <thead><tr><th>#</th><th>Ten</th><th>Email</th></tr></thead>
+        <tbody id="u-list"></tbody>
+      </table>
+    </div>
+    <script>
+      document.getElementById('btn-register').addEventListener('click', function () {
+        const tbody = document.getElementById('u-list');
+        tbody.innerHTML = '';
+        users.forEach(function (u, i) {
+          tbody.innerHTML += '<tr><td>' + (i + 1) + '</td><td>' + u.name + '</td><td>' + u.email + '</td></tr>';
+        });
+        document.getElementById('u-count').textContent = users.length;
+      });
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 3 (Nut xoa tat ca user) - XOA DONG NAY
+    <div class="card">
+      <button id="btn-clear">Xoa tat ca user</button>
+    </div>
+    <script>
+      document.getElementById('btn-clear').addEventListener('click', function () {
+        users.length = 0;
+        document.getElementById('u-list').innerHTML = '';
+        document.getElementById('u-count').textContent = 0;
+      });
+    </script>
+    XOA DONG NAY <<< -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Demo Git</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><h1>Chuc nang ADMIN</h1></header>
+  <nav><a href="index.html">Trang chu</a></nav>
+
+  <main>
+    <!-- NHANH: admin (Nghi) | Moi lan commit chi bo comment 1 khoi: COMMIT 1, roi 2, roi 3 -->
+
+    <!-- >>> COMMIT 1 (Bang quan ly tai khoan) - XOA DONG NAY
+    <div class="card">
+      <h2>Quan ly tai khoan (Admin)</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Ten</th><th>Vai tro</th></tr></thead>
+        <tbody id="a-list"></tbody>
+      </table>
+    </div>
+    <script>
+      const accounts = [
+        { id: 1, name: 'Nguyen Van A', role: 'user' },
+        { id: 2, name: 'Tran Thi B', role: 'user' },
+        { id: 3, name: 'Admin', role: 'admin' }
+      ];
+      function renderAccounts() {
+        const tbody = document.getElementById('a-list');
+        tbody.innerHTML = '';
+        accounts.forEach(function (a) {
+          tbody.innerHTML += '<tr><td>' + a.id + '</td><td>' + a.name + '</td><td>' + a.role + '</td></tr>';
+        });
+      }
+      renderAccounts();
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 2 (O tim kiem tai khoan) - XOA DONG NAY
+    <div class="card">
+      <input id="a-search" placeholder="Tim theo ten...">
+    </div>
+    <script>
+      document.getElementById('a-search').addEventListener('input', function () {
+        const kw = this.value.toLowerCase();
+        document.querySelectorAll('#a-list tr').forEach(function (tr) {
+          tr.style.display = tr.textContent.toLowerCase().includes(kw) ? '' : 'none';
+        });
+      });
+    </script>
+    XOA DONG NAY <<< -->
+
+    <!-- >>> COMMIT 3 (Them tai khoan moi) - XOA DONG NAY
+    <div class="card">
+      <button id="a-add">Them tai khoan moi</button>
+    </div>
+    <script>
+      document.getElementById('a-add').addEventListener('click', function () {
+        const name = prompt('Ten tai khoan moi:');
+        if (!name) return;
+        accounts.push({ id: accounts.length + 1, name: name, role: 'user' });
+        renderAccounts();
+      });
+    </script>
+    XOA DONG NAY <<< -->
+  </main>
+</body>
+</html>
