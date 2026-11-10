@@ -51,7 +51,7 @@
       <button id="a-add">Them tai khoan moi</button>
     </div>
     <script>
-      document.getElementById('a-add').addEventListener('click', function () {
+      
         const name = prompt('Ten tai khoan moi:');
         if (!name) return;
         accounts.push({ id: accounts.length + 1, name: name, role: 'user' });
